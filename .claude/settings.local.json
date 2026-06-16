@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget install --id GitHub.cli --silent --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($maxWait = 180; $elapsed = 0; do { Start-Sleep -Seconds 10; $elapsed += 10; $nodeContent = Get-Content \"C:\\\\Users\\\\LUCIAC~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Lucia-Castello-Desktop-hackathon-test\\\\e41fc860-b2d3-4666-b759-dde5cf1961f5\\\\tasks\\\\bh2car0ed.output\" -Raw -ErrorAction SilentlyContinue; Write-Host \"Elapsed: ${elapsed}s\" } while \\($nodeContent -notmatch \"Successfully installed|failed|error\" -and $elapsed -lt $maxWait\\); \\($nodeContent -split \"`n\" | Select-Object -Last 5\\) -join \"`n\")",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh --version; node --version; npm --version)"
+    ]
+  }
+}
